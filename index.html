@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Touch Beauty Parlour | Ladies Beauty Salon, Kothrud, Pune</title>
+<meta name="description" content="Magic Touch Beauty Parlour — a ladies beauty salon in Kothrud, Pune. Facials, clean-up, hair, waxing, mani-pedi and bridal makeup. Rated 4.9 stars by 339+ customers. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf8f3;
+  --cream2:#fbeee6;
+  --rose:#c2527a;
+  --rose-deep:#9d3660;
+  --rose-soft:#f6d9e2;
+  --gold:#c9a24b;
+  --gold-soft:#efe3c2;
+  --ink:#3d2c33;
+  --muted:#8a6f78;
+  --card:#ffffff;
+  --wa:#25d366;
+  --radius:20px;
+  --shadow:0 18px 40px rgba(157,54,96,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:0 auto}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(253,248,243,.82);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(201,162,75,.25);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--rose-deep)}
+.logo .mark{
+  width:40px;height:40px;border-radius:50%;
+  display:grid;place-items:center;color:#fff;font-size:1.05rem;
+  background:linear-gradient(135deg,var(--rose),var(--gold));
+  box-shadow:0 8px 18px rgba(194,82,122,.35);
+}
+.nav-links{display:none;gap:1.6rem;font-size:.98rem;color:var(--muted)}
+.nav-links a:hover{color:var(--rose-deep)}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.72rem 1.35rem;border-radius:999px;border:0;cursor:pointer;
+  font-family:'Jost',sans-serif;font-size:1rem;font-weight:500;
+  transition:transform .15s ease, box-shadow .15s ease;
+  will-change:transform;
+}
+.btn-call{background:#fff;color:var(--rose-deep);border:1.5px solid var(--rose);box-shadow:0 6px 16px rgba(194,82,122,.15)}
+.btn-wa{background:linear-gradient(135deg,#2fe07a,#1eb85a);color:#fff;box-shadow:0 10px 22px rgba(37,211,102,.35)}
+.btn-rose{background:linear-gradient(135deg,var(--rose),var(--rose-deep));color:#fff;box-shadow:0 10px 22px rgba(157,54,96,.35)}
+.btn:active{transform:scale(.97)}
+.nav .btn{padding:.55rem 1.1rem;font-size:.95rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:4.2rem 0 3.4rem;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55}
+.blob.b1{width:480px;height:480px;left:-140px;top:-160px;background:#f7c3d4;animation:drift1 16s ease-in-out infinite alternate}
+.blob.b2{width:420px;height:420px;right:-120px;top:10%;background:#f3dfae;animation:drift2 19s ease-in-out infinite alternate}
+.blob.b3{width:300px;height:300px;left:38%;bottom:-160px;background:#f9dcc9;animation:drift1 22s ease-in-out infinite alternate-reverse}
+@keyframes drift1{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.12)}}
+@keyframes drift2{from{transform:translate(0,0) scale(1.05)}to{transform:translate(-50px,55px) scale(.95)}}
+.hero-grid{display:grid;gap:2.2rem;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(255,255,255,.65);backdrop-filter:blur(8px);
+  border:1px solid rgba(201,162,75,.45);color:var(--rose-deep);
+  padding:.35rem .9rem;border-radius:999px;font-size:.88rem;letter-spacing:.04em;
+}
+.hero h1{font-size:clamp(2.5rem,8.5vw,4.3rem);line-height:1.08;font-weight:700;color:var(--ink);margin:1rem 0 .4rem}
+.hero h1 .word{display:inline-block;white-space:nowrap}
+.hero h1 .ch{display:inline-block;will-change:transform,opacity}
+.hero h1 em{font-style:italic;background:linear-gradient(120deg,var(--rose),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:clamp(1.05rem,3.4vw,1.3rem);color:var(--muted);max-width:34rem;font-weight:300}
+.rating-badge{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:1.2rem;
+  background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+  border:1px solid rgba(201,162,75,.4);border-radius:16px;padding:.6rem 1rem;
+  box-shadow:0 10px 24px rgba(157,54,96,.10);font-size:.98rem;
+}
+.rating-badge .stars{color:var(--gold);letter-spacing:.12em;font-size:1.05rem}
+.rating-badge b{color:var(--rose-deep);font-size:1.1rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.hero-card{
+  background:rgba(255,255,255,.62);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.8);border-radius:26px;box-shadow:var(--shadow);
+  padding:1.6rem;
+}
+.hero-card h3{font-size:1.3rem;color:var(--rose-deep);margin-bottom:.8rem}
+.hero-card ul{list-style:none;display:grid;gap:.55rem;font-size:1rem}
+.hero-card li{display:flex;gap:.55rem;align-items:baseline}
+.hero-card li::before{content:"✦";color:var(--gold);font-size:.8rem}
+.hero-card .note{margin-top:1rem;font-size:.92rem;color:var(--muted)}
+
+/* ---------- sections ---------- */
+section{padding:3.4rem 0}
+.sec-head{text-align:center;max-width:40rem;margin:0 auto 2.2rem}
+.sec-head .kicker{color:var(--gold);letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;font-weight:600}
+.sec-head h2{font-size:clamp(1.9rem,5.5vw,2.7rem);margin:.4rem 0 .5rem;color:var(--ink)}
+.sec-head p{color:var(--muted);font-weight:300;font-size:1.05rem}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.1rem}
+.svc{
+  background:var(--card);border-radius:var(--radius);padding:1.5rem 1.3rem;cursor:pointer;
+  border:1px solid rgba(246,217,226,.9);box-shadow:0 8px 22px rgba(157,54,96,.07);
+  position:relative;overflow:hidden;text-align:left;width:100%;font-family:inherit;color:inherit;
+}
+.svc::after{
+  content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(246,217,226,.65),transparent 65%);
+  pointer-events:none;
+}
+.svc:hover::after{opacity:1}
+.svc .icon{
+  width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;
+  background:linear-gradient(135deg,var(--rose-soft),var(--gold-soft));margin-bottom:.9rem;
+}
+.svc h3{font-size:1.22rem;margin-bottom:.3rem}
+.svc p{color:var(--muted);font-size:.95rem;font-weight:300}
+.svc .price-line{margin-top:.8rem;color:var(--rose-deep);font-weight:500;font-size:.95rem;display:flex;align-items:center;gap:.4rem}
+.svc .price-line::after{content:"→";transition:transform .2s}
+.svc:hover .price-line::after{transform:translateX(4px)}
+
+/* why us / counters */
+.why{background:linear-gradient(180deg,var(--cream2),var(--cream));border-block:1px solid rgba(201,162,75,.25)}
+.counters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:2rem}
+.counter{
+  text-align:center;background:rgba(255,255,255,.66);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.85);border-radius:var(--radius);padding:1.4rem .8rem;
+  box-shadow:0 10px 24px rgba(157,54,96,.08);
+}
+.counter .num{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;color:var(--rose-deep)}
+.counter .num .suffix{color:var(--gold)}
+.counter .lbl{color:var(--muted);font-size:.95rem;margin-top:.2rem}
+.why-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.why-point{background:#fff;border-radius:var(--radius);padding:1.3rem;border:1px solid rgba(246,217,226,.9)}
+.why-point h3{font-size:1.12rem;margin-bottom:.35rem;color:var(--rose-deep)}
+.why-point p{color:var(--muted);font-weight:300;font-size:.98rem}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.1rem}
+.step{text-align:center;padding:1.6rem 1.2rem;background:#fff;border-radius:var(--radius);border:1px solid rgba(246,217,226,.9);box-shadow:0 8px 22px rgba(157,54,96,.06)}
+.step .n{
+  width:46px;height:46px;margin:0 auto .9rem;border-radius:50%;display:grid;place-items:center;
+  font-family:'Playfair Display',serif;font-size:1.25rem;color:#fff;
+  background:linear-gradient(135deg,var(--rose),var(--gold));
+}
+.step h3{font-size:1.15rem;margin-bottom:.3rem}
+.step p{color:var(--muted);font-weight:300;font-size:.98rem}
+
+/* visit */
+.visit-card{
+  display:grid;gap:1.6rem;background:linear-gradient(135deg,#fff, var(--cream2));
+  border:1px solid rgba(201,162,75,.35);border-radius:26px;padding:2rem;box-shadow:var(--shadow);
+}
+.visit-card h2{font-size:clamp(1.7rem,5vw,2.3rem);color:var(--rose-deep)}
+.visit-card p{color:var(--muted);font-weight:300;font-size:1.05rem;max-width:32rem}
+.visit-actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.big-phone{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--ink)}
+
+/* footer */
+footer{background:#2e1f26;color:#e9d8de;padding:2.6rem 0 5.6rem;margin-top:1rem}
+footer .fname{font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff}
+footer p{color:#c4a9b4;font-weight:300;margin-top:.4rem}
+footer a{color:var(--gold-soft)}
+.foot-row{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:space-between;align-items:flex-start}
+.demo-tag{margin-top:1.6rem;font-size:.85rem;color:#9b7f8a}
+
+/* floating whatsapp */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:70;width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,#2fe07a,#1eb85a);display:grid;place-items:center;
+  box-shadow:0 14px 30px rgba(30,184,90,.45);font-size:1.6rem;color:#fff;
+  animation:pulse 2.4s infinite;
+}
+@keyframes pulse{0%{box-shadow:0 14px 30px rgba(30,184,90,.45),0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 14px 30px rgba(30,184,90,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 14px 30px rgba(30,184,90,.45),0 0 0 0 rgba(37,211,102,0)}}
+
+/* ---------- popup ---------- */
+.overlay{
+  position:fixed;inset:0;z-index:90;background:rgba(46,31,38,.5);
+  backdrop-filter:blur(4px);display:none;align-items:flex-end;justify-content:center;
+}
+.overlay.open{display:flex}
+.sheet{
+  background:var(--cream);width:min(520px,100%);border-radius:26px 26px 0 0;
+  padding:1.8rem 1.6rem 2rem;box-shadow:0 -18px 50px rgba(0,0,0,.25);
+  max-height:86vh;overflow:auto;
+}
+.sheet .icon{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:1.7rem;background:linear-gradient(135deg,var(--rose-soft),var(--gold-soft));margin-bottom:1rem}
+.sheet h3{font-size:1.6rem;margin-bottom:.4rem}
+.sheet p{color:var(--muted);font-weight:300}
+.sheet .price-note{margin:1rem 0;padding:.8rem 1rem;background:#fff;border:1px dashed var(--gold);border-radius:14px;color:var(--rose-deep);font-weight:500}
+.sheet .row{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.1rem}
+.sheet .row .btn{flex:1;justify-content:center}
+.close-x{float:right;background:#fff;border:1px solid var(--rose-soft);width:38px;height:38px;border-radius:50%;font-size:1.05rem;cursor:pointer;color:var(--rose-deep)}
+
+/* reveal defaults (JS animates in; content visible if JS fails after timeout class) */
+.reveal{opacity:0;transform:translateY(26px)}
+.no-anim .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none}
+  .blob,.wa-float{animation:none}
+}
+@media(min-width:820px){
+  .nav-links{display:flex}
+  .hero-grid{grid-template-columns:1.15fr .85fr}
+  .visit-card{grid-template-columns:1.1fr .9fr;align-items:center}
+  .overlay{align-items:center;padding:1rem}
+  .sheet{border-radius:26px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="mark">M</span> Magic Touch</a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#book">How to Book</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <a class="btn btn-call" href="tel:+917387086864">📞 Call Now</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    </div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">✦ Ladies Beauty Salon · Kothrud, Pune</span>
+        <h1 id="heroTitle">Magic Touch <em>Beauty Parlour</em></h1>
+        <p class="sub">Kothrud's loved ladies salon for glowing skin, beautiful hair and complete pampering — facials, clean-up, hair spa, waxing, mani-pedi and bridal makeup, all under one roof.</p>
+        <div class="rating-badge">
+          <span class="stars">★★★★★</span>
+          <span><b>4.9</b> rated by <b>339+</b> happy customers</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-wa" href="https://wa.me/917387086864?text=Hello%20Magic%20Touch%20Beauty%20Parlour!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+          <a class="btn btn-call" href="tel:+917387086864">📞 +91 73870 86864</a>
+        </div>
+      </div>
+      <aside class="hero-card reveal">
+        <h3>Salon Favourites</h3>
+        <ul>
+          <li>Signature facials &amp; clean-up</li>
+          <li>Haircut, styling &amp; hair spa</li>
+          <li>Full waxing — smooth &amp; gentle</li>
+          <li>Manicure &amp; pedicure care</li>
+          <li>Bridal &amp; party makeup</li>
+        </ul>
+        <p class="note">Tap any service below to see details and book your slot on WhatsApp in seconds.</p>
+      </aside>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Our Services</div>
+        <h2>Everything a Lady Needs to Glow</h2>
+        <p>Choose a service to know more. For today's price and offers, just ask us on WhatsApp — we reply fast.</p>
+      </div>
+      <div class="services-grid" id="svcGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Why Magic Touch</div>
+        <h2>Loved by Kothrud, Rated by You</h2>
+        <p>Our customers say it best — with their ratings.</p>
+      </div>
+      <div class="counters">
+        <div class="counter reveal"><div class="num"><span class="count" data-target="4.9" data-decimals="1">0</span><span class="suffix">★</span></div><div class="lbl">Average Rating</div></div>
+        <div class="counter reveal"><div class="num"><span class="count" data-target="339">0</span><span class="suffix">+</span></div><div class="lbl">Customer Ratings</div></div>
+        <div class="counter reveal"><div class="num"><span class="count" data-target="8">0</span></div><div class="lbl">Beauty Services</div></div>
+        <div class="counter reveal"><div class="num"><span class="count" data-target="100">0</span><span class="suffix">%</span></div><div class="lbl">Ladies Only Salon</div></div>
+      </div>
+      <div class="why-points">
+        <div class="why-point reveal"><h3>Only for Ladies</h3><p>A comfortable, private space where women can relax and enjoy their me-time without any worry.</p></div>
+        <div class="why-point reveal"><h3>Honest Prices</h3><p>No surprises at the counter — message us on WhatsApp and know the exact price before you visit.</p></div>
+        <div class="why-point reveal"><h3>Easy Booking</h3><p>Book, reschedule or ask anything on WhatsApp. No waiting on calls, no queues at the salon.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING STEPS -->
+  <section id="book">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Booking</div>
+        <h2>Book in 30 Seconds</h2>
+        <p>Three simple steps between you and your glow-up.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="n">1</div><h3>Pick a Service</h3><p>Tap any service above — facial, hair, bridal and more.</p></div>
+        <div class="step reveal"><div class="n">2</div><h3>Tap WhatsApp</h3><p>Your booking message is ready-written. Just press send.</p></div>
+        <div class="step reveal"><div class="n">3</div><h3>Visit &amp; Relax</h3><p>We confirm your slot. Walk in at your time and enjoy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="visit-card reveal">
+        <div>
+          <h2>Visit Us in Kothrud</h2>
+          <p>Magic Touch Beauty Parlour (Magic Touch Ladies Beauty Salon), Kothrud, Pune. Call or WhatsApp us for directions and to book your appointment before you come.</p>
+        </div>
+        <div>
+          <div class="big-phone">+91 73870 86864</div>
+          <div class="visit-actions" style="margin-top:1rem">
+            <a class="btn btn-wa" href="https://wa.me/917387086864?text=Hello%20Magic%20Touch%20Beauty%20Parlour!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+            <a class="btn btn-rose" href="tel:+917387086864">📞 Call the Salon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div>
+        <div class="fname">Magic Touch Beauty Parlour</div>
+        <p>Magic Touch Ladies Beauty Salon · Kothrud, Pune<br>Rated 4.9★ by 339+ customers</p>
+      </div>
+      <div>
+        <p>Book your appointment:<br>
+        <a href="tel:+917387086864">📞 +91 73870 86864</a><br>
+        <a href="https://wa.me/917387086864" target="_blank" rel="noopener">💬 Chat on WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="demo-tag">© Magic Touch Beauty Parlour, Kothrud. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/917387086864?text=Hello%20Magic%20Touch%20Beauty%20Parlour!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- SERVICE POPUP -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+  <div class="sheet" id="sheet">
+    <button class="close-x" id="closeSheet" aria-label="Close">✕</button>
+    <div class="icon" id="sheetIcon">✨</div>
+    <h3 id="sheetTitle">Service</h3>
+    <p id="sheetDesc"></p>
+    <div class="price-note">💬 WhatsApp us for today's price &amp; offers — we reply quickly.</div>
+    <div class="row">
+      <a class="btn btn-wa" id="sheetWa" href="#" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-call" href="tel:+917387086864">Call Instead</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+<script>
+(function(){
+  "use strict";
+  var M = window.Motion || null;
+
+  /* ---------------- services ---------------- */
+  var SERVICES = [
+    {icon:"🌸", name:"Facial",            desc:"Deep-cleansing and glow facials matched to your skin type — for instant freshness, brightness and that special-occasion radiance."},
+    {icon:"💧", name:"Clean-Up",          desc:"A quick refresh for your skin: gentle cleansing, exfoliation and a soothing pack that removes tan and dullness in one sitting."},
+    {icon:"✂️", name:"Haircut & Styling", desc:"Trendy cuts, layers, blow-outs and styling by experienced hands — walk out with hair that turns heads."},
+    {icon:"🪷", name:"Hair Spa",          desc:"Nourishing spa rituals that repair dry, damaged hair, calm the scalp and bring back softness and shine."},
+    {icon:"🍯", name:"Waxing",            desc:"Smooth, gentle waxing for arms, legs and full body with skin-friendly care before and after — for silky results that last."},
+    {icon:"💅", name:"Manicure",          desc:"Complete hand care: shaping, cuticle care, massage and polish — hands that look as cared-for as they feel."},
+    {icon:"🦶", name:"Pedicure",          desc:"Relaxing foot soak, scrub, massage and polish. Tired feet leave soft, clean and pretty."},
+    {icon:"👰", name:"Bridal Makeup",     desc:"Complete bridal and party makeup looks created around you — trials, packages and on-the-day glam for your big moments."}
+  ];
+  var WA = "https://wa.me/917387086864?text=";
+  function waLink(service){
+    var msg = service
+      ? "Hello Magic Touch Beauty Parlour! I am interested in your " + service + " service. Please share the price and available slots."
+      : "Hello Magic Touch Beauty Parlour! I would like to book an appointment.";
+    return WA + encodeURIComponent(msg);
+  }
+
+  var grid = document.getElementById("svcGrid");
+  SERVICES.forEach(function(s){
+    var b = document.createElement("button");
+    b.className = "svc reveal";
+    b.type = "button";
+    b.innerHTML = '<div class="icon">' + s.icon + '</div><h3>' + s.name + '</h3><p>' +
+      s.desc.split("—")[0].trim() + '</p><div class="price-line">WhatsApp for price</div>';
+    b.addEventListener("click", function(){ openSheet(s); });
+    b.addEventListener("pointermove", function(e){
+      var r = b.getBoundingClientRect();
+      b.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100) + "%");
+      b.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100) + "%");
+    });
+    grid.appendChild(b);
+  });
+
+  /* ---------------- popup sheet ---------------- */
+  var overlay = document.getElementById("overlay");
+  var sheet   = document.getElementById("sheet");
+  function openSheet(s){
+    document.getElementById("sheetIcon").textContent = s.icon;
+    document.getElementById("sheetTitle").textContent = s.name;
+    document.getElementById("sheetDesc").textContent = s.desc;
+    document.getElementById("sheetWa").href = waLink(s.name);
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+    if (M && M.animate){
+      M.animate(sheet, {y:[46,0], opacity:[0,1]}, {type:"spring", stiffness:260, damping:24});
+    }
+  }
+  function closeSheet(){
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("closeSheet").addEventListener("click", closeSheet);
+  overlay.addEventListener("click", function(e){ if (e.target === overlay) closeSheet(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeSheet(); });
+
+  /* ---------------- SplitText hero heading ---------------- */
+  var title = document.getElementById("heroTitle");
+  (function splitText(){
+    var nodes = Array.prototype.slice.call(title.childNodes);
+    title.innerHTML = "";
+    nodes.forEach(function(node){
+      var isEm = node.nodeType === 1;
+      var text = node.textContent;
+      text.split(" ").filter(Boolean).forEach(function(word){
+        var w = document.createElement("span");
+        w.className = "word";
+        if (isEm) w.style.fontStyle = "italic";
+        word.split("").forEach(function(c){
+          var s = document.createElement("span");
+          s.className = "ch";
+          s.textContent = c;
+          if (isEm){
+            s.style.background = "linear-gradient(120deg,#c2527a,#c9a24b)";
+            s.style.webkitBackgroundClip = "text";
+            s.style.backgroundClip = "text";
+            s.style.color = "transparent";
+          }
+          w.appendChild(s);
+        });
+        title.appendChild(w);
+        title.appendChild(document.createTextNode(" "));
+      });
+    });
+    var chars = title.querySelectorAll(".ch");
+    if (M && M.animate){
+      M.animate(chars, {opacity:[0,1], y:[26,0], rotate:[-4,0]},
+        {duration:.7, delay: M.stagger ? M.stagger(0.028) : 0, type:"spring", stiffness:210, damping:20});
+    } else {
+      chars.forEach(function(c){ c.style.opacity = 1; });
+    }
+  })();
+
+  /* ---------------- scroll reveals ---------------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if (M && M.inView){
+    revealEls.forEach(function(el){
+      M.inView(el, function(){
+        M.animate(el, {opacity:[0,1], y:[26,0]}, {duration:.7, type:"spring", stiffness:120, damping:20});
+      }, {amount:.25});
+    });
+  } else if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          en.target.style.transition = "opacity .7s ease, transform .7s cubic-bezier(.2,.8,.25,1)";
+          en.target.style.opacity = 1;
+          en.target.style.transform = "none";
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.2});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    document.body.classList.add("no-anim");
+  }
+  /* safety: never leave content hidden */
+  setTimeout(function(){
+    revealEls.forEach(function(el){
+      if (parseFloat(getComputedStyle(el).opacity) < 0.05){
+        el.style.opacity = 1; el.style.transform = "none";
+      }
+    });
+  }, 2600);
+
+  /* ---------------- CountUp counters ---------------- */
+  function countUp(el){
+    var target = parseFloat(el.getAttribute("data-target"));
+    var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+    if (M && M.animate){
+      var obj = {v:0};
+      M.animate(obj, {v:target}, {duration:1.6, ease:"easeOut",
+        onUpdate:function(){ el.textContent = obj.v.toFixed(decimals); }});
+    } else {
+      var start = null;
+      function step(ts){
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / 1400, 1);
+        el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(decimals);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+  }
+  var counted = false;
+  var counterIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting && !counted){
+        counted = true;
+        document.querySelectorAll(".count").forEach(countUp);
+        counterIO.disconnect();
+      }
+    });
+  }, {threshold:.35});
+  var firstCounter = document.querySelector(".counters");
+  if (firstCounter) counterIO.observe(firstCounter);
+
+  /* ---------------- button tap physics ---------------- */
+  if (M && M.animate){
+    document.querySelectorAll(".btn").forEach(function(btn){
+      btn.addEventListener("pointerdown", function(){
+        M.animate(btn, {scale:.94}, {type:"spring", stiffness:500, damping:18});
+      });
+      ["pointerup","pointerleave"].forEach(function(ev){
+        btn.addEventListener(ev, function(){
+          M.animate(btn, {scale:1}, {type:"spring", stiffness:400, damping:15});
+        });
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
